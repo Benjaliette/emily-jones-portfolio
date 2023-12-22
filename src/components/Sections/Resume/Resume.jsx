@@ -1,5 +1,7 @@
 import * as React from "react";
 
+import './Resume.scss';
+
 const Resume = () => {
   return (
     <section id="resume" className="resume">

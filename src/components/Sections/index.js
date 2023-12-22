@@ -4,4 +4,6 @@ import Portfolio from './Portfolio';
 import Resume from './Resume';
 import Services from './Services';
 
+// import './Sections.scss';
+
 export { About, Contact, Portfolio, Resume, Services };

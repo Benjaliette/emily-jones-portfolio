@@ -1,5 +1,7 @@
 import * as React from "react";
 
+import './Portfolio.scss';
+
 const Portfolio = () => {
   return (
     <section id="portfolio" className="portfolio">

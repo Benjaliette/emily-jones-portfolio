@@ -1,5 +1,13 @@
 import * as React from "react";
 
+import { Row, Col, Container } from 'react-bootstrap';
+import { CountBox } from '../../Boxes';
+
+import './About.scss';
+
+import me from "../../../images/me.jpg";
+import { Tes1, Tes2, Tes3, Tes4, Tes5 } from "../../../images";
+
 const About = () => {
   return (
     <section id="about" className="about">
@@ -9,38 +17,37 @@ const About = () => {
           <p>Learn more about me</p>
         </div>
 
-        <div className="row">
-          <div className="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/me.jpg" className="img-fluid" alt="" />
-          </div>
-          <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>UI/UX &amp; Graphic Designer</h3>
+        <Row>
+          <Col lg={4} data-aos="fade-right">
+            <img src={me} className="img-fluid" alt="" />
+          </Col>
+          <Col lg={8} pt={4} pt-lg={0} className="content" data-aos="fade-left">
+            <h3>Magic performer &amp; rabbit lover</h3>
             <p className="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              It's some kind of magic ... Welcome to my ABRACADABRA resume
             </p>
-            <div className="row">
-              <div className="col-lg-6">
+            <Row>
+              <Col lg={6}>
                 <ul>
                   <li>
                     <i className="bi bi-chevron-right"></i>{" "}
-                    <strong>Birthday:</strong> <span>1 May 1995</span>
+                    <strong>Birthday:</strong> <span>1 May 1993</span>
                   </li>
                   <li>
                     <i className="bi bi-chevron-right"></i>{" "}
-                    <strong>Website:</strong> <span>www.example.com</span>
+                    <strong>Website:</strong> <span>www.magicemilyjones.com</span>
                   </li>
                   <li>
                     <i className="bi bi-chevron-right"></i>{" "}
-                    <strong>Phone:</strong> <span>+123 456 7890</span>
+                    <strong>Phone:</strong> <span>+33 6 00 00 00 00</span>
                   </li>
                   <li>
                     <i className="bi bi-chevron-right"></i>{" "}
-                    <strong>City:</strong> <span>New York, USA</span>
+                    <strong>City:</strong> <span>Bordeaux, FR</span>
                   </li>
                 </ul>
-              </div>
-              <div className="col-lg-6">
+              </Col>
+              <Col lg={6}>
                 <ul>
                   <li>
                     <i className="bi bi-chevron-right"></i>{" "}
@@ -48,95 +55,49 @@ const About = () => {
                   </li>
                   <li>
                     <i className="bi bi-chevron-right"></i>{" "}
-                    <strong>Degree:</strong> <span>Master</span>
+                    <strong>Degree:</strong> <span>Master of Magic</span>
                   </li>
                   <li>
                     <i className="bi bi-chevron-right"></i>{" "}
-                    <strong>PhEmailone:</strong> <span>email@example.com</span>
+                    <strong>Email:</strong> <span>contact@magicemilyjones.com</span>
                   </li>
                   <li>
                     <i className="bi bi-chevron-right"></i>{" "}
-                    <strong>Freelance:</strong> <span>Available</span>
+                    <strong>Shows:</strong> <span>Available</span>
                   </li>
                 </ul>
-              </div>
-            </div>
-            <p>
-              Officiis eligendi itaque labore et dolorum mollitia officiis optio
-              vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor
-              incidunt officia tempore. Et eius omnis. Cupiditate ut dicta
-              maxime officiis quidem quia. Sed et consectetur qui quia
-              repellendus itaque neque. Aliquid amet quidem ut quaerat
-              cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium
-              dolores.
-            </p>
-          </div>
-        </div>
+              </Col>
+            </Row>
+          </Col>
+        </Row>
       </div>
-      End About Me // Counts
-      <div className="counts container">
-        <div className="row">
-          <div className="col-lg-3 col-md-6">
-            <div className="count-box">
-              <i className="bi bi-emoji-smile"></i>
-              <span
-                data-purecounter-start="0"
-                data-purecounter-end="232"
-                data-purecounter-duration="1"
-                className="purecounter"
-              ></span>
-              <p>Happy Clients</p>
-            </div>
-          </div>
 
-          <div className="col-lg-3 col-md-6 mt-5 mt-md-0">
-            <div className="count-box">
-              <i className="bi bi-journal-richtext"></i>
-              <span
-                data-purecounter-start="0"
-                data-purecounter-end="521"
-                data-purecounter-duration="1"
-                className="purecounter"
-              ></span>
-              <p>Projects</p>
-            </div>
-          </div>
+      <Container className="counts">
+        <Row>
+          <Col lg={3} md={6}>
+            <CountBox count="232" icon="smile">Happy Clients</CountBox>
+          </Col>
 
-          <div className="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div className="count-box">
-              <i className="bi bi-headset"></i>
-              <span
-                data-purecounter-start="0"
-                data-purecounter-end="1463"
-                data-purecounter-duration="1"
-                className="purecounter"
-              ></span>
-              <p>Hours Of Support</p>
-            </div>
-          </div>
+          <Col lg={3} md={6} mt={5} mtmd={0}>
+            <CountBox count="521" icon="file">Projects</CountBox>
+          </Col>
 
-          <div className="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div className="count-box">
-              <i className="bi bi-award"></i>
-              <span
-                data-purecounter-start="0"
-                data-purecounter-end="24"
-                data-purecounter-duration="1"
-                className="purecounter"
-              ></span>
-              <p>Awards</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      End Counts // Skills
-      <div className="skills container">
+          <Col lg={3} md={6} mt={5} mtlg={0}>
+            <CountBox count="1463" icon="headset">House of supports</CountBox>
+          </Col>
+
+          <Col lg={3} md={6} mt={5} mtlg={0}>
+            <CountBox count="24" icon="award">Awards</CountBox>
+          </Col>
+        </Row>
+      </Container>
+      <Container className="skills">
         <div className="section-title">
           <h2>Skills</h2>
         </div>
 
-        <div className="row skills-content">
-          <div className="col-lg-6">
+        <Row className="skills-content">
+          <Col lg={6}>
             <div className="progress">
               <span className="skill">
                 HTML <i className="val">100%</i>
@@ -181,9 +142,9 @@ const About = () => {
                 ></div>
               </div>
             </div>
-          </div>
+          </Col>
 
-          <div className="col-lg-6">
+          <Col lg={6}>
             <div className="progress">
               <span className="skill">
                 PHP <i className="val">80%</i>
@@ -228,41 +189,41 @@ const About = () => {
                 ></div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      End Skills // Interests
-      <div className="interests container">
+          </Col>
+        </Row>
+      </Container>
+
+      <Container className="interests">
         <div className="section-title">
           <h2>Interests</h2>
         </div>
 
-        <div className="row">
-          <div className="col-lg-3 col-md-4">
+        <Row>
+          <Col lg={3} md={4}>
             <div className="icon-box">
               <i className="ri-store-line" style={{ color: "#ffbb2c" }}></i>
-              <h3>Lorem Ipsum</h3>
+              <h3>David Copperfield</h3>
             </div>
-          </div>
-          <div className="col-lg-3 col-md-4 mt-4 mt-md-0">
+          </Col>
+          <Col lg={3} md={4} mt={4} mtmd={0}>
             <div className="icon-box">
               <i
                 className="ri-bar-chart-box-line"
                 style={{ color: "#5578ff" }}
               ></i>
-              <h3>Dolor Sitema</h3>
+              <h3>Magie en famille</h3>
             </div>
-          </div>
-          <div className="col-lg-3 col-md-4 mt-4 mt-md-0">
+          </Col>
+          <Col lg={3} md={4} mt={4} mtmd={0}>
             <div className="icon-box">
               <i
                 className="ri-calendar-todo-line"
                 style={{ color: "#e80368" }}
               ></i>
-              <h3>Sed perspiciatis</h3>
+              <h3>Rabbits</h3>
             </div>
-          </div>
-          <div className="col-lg-3 col-md-4 mt-4 mt-lg-0">
+          </Col>
+          <Col lg={3} md={4} mt={4} mtlg={0}>
             <div className="icon-box">
               <i
                 className="ri-paint-brush-line"
@@ -270,8 +231,8 @@ const About = () => {
               ></i>
               <h3>Magni Dolores</h3>
             </div>
-          </div>
-          <div className="col-lg-3 col-md-4 mt-4">
+          </Col>
+          <Col lg={3} md={4} mt={4}>
             <div className="icon-box">
               <i
                 className="ri-database-2-line"
@@ -279,8 +240,8 @@ const About = () => {
               ></i>
               <h3>Nemo Enim</h3>
             </div>
-          </div>
-          <div className="col-lg-3 col-md-4 mt-4">
+          </Col>
+          <Col lg={3} md={4} mt={4}>
             <div className="icon-box">
               <i
                 className="ri-gradienter-line"
@@ -288,8 +249,8 @@ const About = () => {
               ></i>
               <h3>Eiusmod Tempor</h3>
             </div>
-          </div>
-          <div className="col-lg-3 col-md-4 mt-4">
+          </Col>
+          <Col lg={3} md={4} mt={4}>
             <div className="icon-box">
               <i
                 className="ri-file-list-3-line"
@@ -297,8 +258,8 @@ const About = () => {
               ></i>
               <h3>Midela Teren</h3>
             </div>
-          </div>
-          <div className="col-lg-3 col-md-4 mt-4">
+          </Col>
+          <Col lg={3} md={4} mt={4}>
             <div className="icon-box">
               <i
                 className="ri-price-tag-2-line"
@@ -306,20 +267,20 @@ const About = () => {
               ></i>
               <h3>Pira Neve</h3>
             </div>
-          </div>
-          <div className="col-lg-3 col-md-4 mt-4">
+          </Col>
+          <Col lg={3} md={4} mt={4}>
             <div className="icon-box">
               <i className="ri-anchor-line" style={{ color: "#b2904f" }}></i>
               <h3>Dirada Pack</h3>
             </div>
-          </div>
-          <div className="col-lg-3 col-md-4 mt-4">
+          </Col>
+          <Col lg={3} md={4} mt={4}>
             <div className="icon-box">
               <i className="ri-disc-line" style={{ color: "#b20969" }}></i>
               <h3>Moton Ideal</h3>
             </div>
-          </div>
-          <div className="col-lg-3 col-md-4 mt-4">
+          </Col>
+          <Col lg={3} md={4} mt={4}>
             <div className="icon-box">
               <i
                 className="ri-base-station-line"
@@ -327,8 +288,8 @@ const About = () => {
               ></i>
               <h3>Verdo Park</h3>
             </div>
-          </div>
-          <div className="col-lg-3 col-md-4 mt-4">
+          </Col>
+          <Col lg={3} md={4} mt={4}>
             <div className="icon-box">
               <i
                 className="ri-fingerprint-line"
@@ -336,11 +297,11 @@ const About = () => {
               ></i>
               <h3>Flavor Nivelanda</h3>
             </div>
-          </div>
-        </div>
-      </div>
-      // Testimonials
-      <div className="testimonials container">
+          </Col>
+        </Row>
+      </Container>
+
+      <Container className="testimonials">
         <div className="section-title">
           <h2>Testimonials</h2>
         </div>
@@ -362,7 +323,7 @@ const About = () => {
                   <i className="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <img
-                  src="assets/img/testimonials/testimonials-1.jpg"
+                  src={Tes1}
                   className="testimonial-img"
                   alt=""
                 />
@@ -370,7 +331,6 @@ const About = () => {
                 <h4>Ceo &amp; Founder</h4>
               </div>
             </div>
-            End testimonial item
             <div className="swiper-slide">
               <div className="testimonial-item">
                 <p>
@@ -382,7 +342,7 @@ const About = () => {
                   <i className="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <img
-                  src="assets/img/testimonials/testimonials-2.jpg"
+                  src={Tes2}
                   className="testimonial-img"
                   alt=""
                 />
@@ -390,7 +350,6 @@ const About = () => {
                 <h4>Designer</h4>
               </div>
             </div>
-            End testimonial item
             <div className="swiper-slide">
               <div className="testimonial-item">
                 <p>
@@ -401,7 +360,7 @@ const About = () => {
                   <i className="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <img
-                  src="assets/img/testimonials/testimonials-3.jpg"
+                  src={Tes3}
                   className="testimonial-img"
                   alt=""
                 />
@@ -409,7 +368,6 @@ const About = () => {
                 <h4>Store Owner</h4>
               </div>
             </div>
-            End testimonial item
             <div className="swiper-slide">
               <div className="testimonial-item">
                 <p>
@@ -421,7 +379,7 @@ const About = () => {
                   <i className="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <img
-                  src="assets/img/testimonials/testimonials-4.jpg"
+                  src={Tes4}
                   className="testimonial-img"
                   alt=""
                 />
@@ -429,7 +387,6 @@ const About = () => {
                 <h4>Freelancer</h4>
               </div>
             </div>
-            End testimonial item
             <div className="swiper-slide">
               <div className="testimonial-item">
                 <p>
@@ -441,7 +398,7 @@ const About = () => {
                   <i className="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <img
-                  src="assets/img/testimonials/testimonials-5.jpg"
+                  src={Tes5}
                   className="testimonial-img"
                   alt=""
                 />
@@ -449,14 +406,12 @@ const About = () => {
                 <h4>Entrepreneur</h4>
               </div>
             </div>
-            End testimonial item
           </div>
           <div className="swiper-pagination"></div>
         </div>
 
         <div className="owl-carousel testimonials-carousel"></div>
-      </div>
-      End Testimonials
+      </Container>
     </section>
   );
 };

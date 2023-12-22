@@ -3,6 +3,8 @@ import * as React from "react";
 import { Header } from '../components/Header';
 import { About, Contact, Portfolio, Resume, Services } from '../components/Sections';
 
+import '../styles/main.scss';
+
 const IndexPage = () => {
   return (
     <>
