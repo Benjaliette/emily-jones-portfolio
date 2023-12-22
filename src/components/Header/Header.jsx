@@ -7,7 +7,7 @@ import { Navbar } from '../Navbar';
 
 import './Header.scss';
 
-const Header = () => {
+const Header = ({onSelectNav}) => {
   return (
     <header id="header">
       <Container>
@@ -20,7 +20,7 @@ const Header = () => {
         <h2>
           I'm a passionate <span>graphic designer</span> from New York
         </h2>
-        <Navbar></Navbar>
+        <Navbar onSelectNav={onSelectNav}></Navbar>
         <div className="social-links">
           <a href="#" className="twitter">
             <i className="bi bi-twitter"></i>
