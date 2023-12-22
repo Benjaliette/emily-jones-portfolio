@@ -18,7 +18,7 @@ const Header = ({onSelectNav}) => {
           <img src="assets/img/logo.png" alt="" class="img-fluid" />
         </AnchorLink>
         <h2>
-          I'm a passionate <span>graphic designer</span> from New York
+          I'm a passionate <span>magician</span> from Bordeaux Magic City
         </h2>
         <Navbar onSelectNav={onSelectNav}></Navbar>
         <div className="social-links">
