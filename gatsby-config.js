@@ -6,5 +6,5 @@ module.exports = {
     title: `Emily Jones portfolio`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: [],
+  plugins: [`gatsby-plugin-anchor-links`],
 }
